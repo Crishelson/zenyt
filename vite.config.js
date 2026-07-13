@@ -17,6 +17,12 @@ export default defineConfig({
         tailwindcss(),
     ],
     server: {
+        // host: '0.0.0.0', // for LAN access
+        // port: 9999,
+        // strictPort: true,
+        // hmr: {
+        //     host: '192.168.100.171',
+        // },
         watch: {
             ignored: ['**/storage/framework/views/**'],
         },
