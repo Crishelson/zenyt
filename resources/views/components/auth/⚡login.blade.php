@@ -35,7 +35,7 @@ new class extends Component
             <div class="flex flex-col flex-1 hidden md:flex justify-center gap-4 pl-22 pr-8">
                 <h3 class="text-xl tracking-widest pb-16">ZENYT</h3>
                 <div class="flex flex-col gap-2 max-w-3xl">
-                    <h1 class="text-8xl pt-4">Alcance o seu <span class="text-blue-600">ápice</span></h1>
+                    <h1 class="text-8xl pt-4 font-display">Alcance o seu <span class="text-blue-600">ápice</span></h1>
                     <h2 class="text-xl pt-8">Todo dia estudado é mais um passo em direção à melhor versão de si mesmo. Sem distrações, sem ruído — só evolução.</h2>
                 </div>
                 <div class="flex flex-row tracking-widest gap-24 justify-start pt-18">
