@@ -4,23 +4,13 @@ use Livewire\Component;
 
 new class extends Component
 {
-    //
+    public string $mode = 'register';
+
 };
 ?>
 
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" data-theme="light">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Zenyt</title>
-
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-    @livewireStyles()
-
-</head>
-<body>
+@extends('layouts.app')
+@section('content')
     <div
         x-data="{ mobile: window.innerWidth < 768, register: true }"
         x-init=" window.addEventListener('resize', () => {mobile = window.innerWidth < 768})"
@@ -45,11 +35,43 @@ new class extends Component
                 </div>
             </div>
             <div class="flex flex-1 justify-center items-center md:pr-22">
-                <div class="flex -mr-8 mb-[30%] z-10 relative">
-                    <div class="flex flex-col gap-10 items-center">
-                        <button class="-rotate-90 bg-[#07234f] rounded-t-lg px-4 py-2">Registrar</button>
-                        <button class="-rotate-90 bg-[#07234f] rounded-t-lg px-4 py-2">Login</button>
-                    </div>
+                <div class="relative">
+
+                {{-- Abas --}}
+                <div class="absolute -left-48 top-0 z-0 flex flex-col gap-[11vh] group">
+
+                    {{-- Cadastro --}}
+                    <button
+                        wire:click="$set('mode', 'register')"
+                        @class([
+                            'relative h-12 w-40 rounded-t-xl -rotate-90 origin-bottom-right text-xs uppercase tracking-[0.35em] font-display transition-all duration-300 ease-out cursor-pointer',
+
+                            'translate-x-8 z-20 bg-gradient-to-r from-[#0a316f] to-[#08295e] shadow-lg shadow-blue-900/40'
+                                => $mode === 'register',
+
+                            'translate-x-16 z-10 bg-[#061a3b] opacity-80 hover:translate-x-10 group-hover:translate-x-12'
+                                => $mode !== 'register',
+                        ])
+                    >
+                        Cadastro
+                    </button>
+
+                    {{-- Login --}}
+                    <button
+                        wire:click="$set('mode', 'login')"
+                        @class([
+                            'relative h-12 w-40 rounded-t-xl -rotate-90 origin-bottom-right text-xs uppercase tracking-[0.35em] font-display transition-all duration-300 ease-out cursor-pointer',
+
+                            'translate-x-8 z-20 bg-gradient-to-r from-[#0a316f] to-[#08295e] shadow-lg shadow-blue-900/40'
+                                => $mode === 'login',
+
+                            'translate-x-16 z-10 bg-[#061a3b] opacity-80 hover:translate-x-10 group-hover:translate-x-12'
+                                => $mode !== 'login',
+                        ])
+                    >
+                        Login
+                    </button>
+
                 </div>
                 <div class="relative z-20 bg-gradient-to-b from-[#0a316f] via-[#08295e] to-[#07234f] p-6 rounded-lg">
                     <div class="flex flex-col gap-2 max-w-md pb-4">
@@ -84,6 +106,4 @@ new class extends Component
             </div>
         </main>
     </div>
-    @livewireScripts()
-</body>
-</html>
+@endsection

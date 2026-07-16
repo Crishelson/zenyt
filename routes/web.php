@@ -2,6 +2,5 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('components.auth.⚡login');
-});
+Route::livewire('/', 'pages::auth.⚡login')
+    ->name('login-page');
