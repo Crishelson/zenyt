@@ -30,22 +30,28 @@ new class extends Component
             :src="mobile ? '{{ asset('MobileBg.png') }}' : '{{ asset('DesktopBg.png') }}'"
             class="absolute inset-0 size-full h-full object-cover -z-10"
         >
-        <div class="absolute inset-0 z-10 bg-black/35"></div>
+        <div class="absolute inset-0 z-10 bg-black/45"></div>
         <main class="flex h-full relative z-10 flex-row p-4 gap-4 text-gray-300">
-            <div class="flex flex-col flex-1 hidden md:flex justify-center gap-4 pl-22 pr-8">
-                <h3 class="text-xl tracking-widest pb-16">ZENYT</h3>
-                <div class="flex flex-col gap-2 max-w-3xl">
-                    <h1 class="text-8xl pt-4 font-display">Alcance o seu <span class="text-blue-600">ápice</span></h1>
-                    <h2 class="text-xl pt-8">Todo dia estudado é mais um passo em direção à melhor versão de si mesmo. Sem distrações, sem ruído — só evolução.</h2>
+            <div class="flex flex-col flex-1 hidden md:flex justify-center gap-[28%] pl-22 pr-8">
+                <h3 class="text-xl tracking-widest">ZENYT</h3>
+                <div class="flex flex-col gap-4 max-w-3xl">
+                    <h1 class="text-8xl font-display">Alcance o seu <span class="text-blue-600">ápice</span></h1>
+                    <h2 class="text-xl">Todo dia estudado é mais um passo em direção à melhor versão de si mesmo. Sem distrações, sem ruído — só evolução.</h2>
                 </div>
-                <div class="flex flex-row tracking-widest gap-24 justify-start pt-18">
+                <div class="flex flex-row tracking-widest gap-24 justify-start">
                     <p>FOCO</p>
                     <p>HÁBITO</p>
                     <p>SUPERAÇÃO</p>
                 </div>
             </div>
-            <div class="flex flex-col flex-1 justify-center items-center gap-4 md:pr-22">
-                <div class="bg-black/60 p-6 rounded-lg shadow-2xl/30">
+            <div class="flex flex-1 justify-center items-center md:pr-22">
+                <div class="flex -mr-8 mb-[30%] z-10 relative">
+                    <div class="flex flex-col gap-10 items-center">
+                        <button class="-rotate-90 bg-[#07234f] rounded-t-lg px-4 py-2">Registrar</button>
+                        <button class="-rotate-90 bg-[#07234f] rounded-t-lg px-4 py-2">Login</button>
+                    </div>
+                </div>
+                <div class="relative z-20 bg-gradient-to-b from-[#0a316f] via-[#08295e] to-[#07234f] p-6 rounded-lg">
                     <div class="flex flex-col gap-2 max-w-md pb-4">
                         <div class="flex flex-row gap-2 items-center">
                             <h3 class="text-sm tracking-widest text-blue-600">> Bem-Vindo</h3>
