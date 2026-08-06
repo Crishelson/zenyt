@@ -1,4 +1,5 @@
 import Alpine from 'alpinejs';
+import auth from './alpine/auth';
 import { createIcons } from 'lucide';
 
 document.addEventListener('livewire:navigated', () => {
@@ -10,5 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 window.Alpine = Alpine;
+
+Alpine.data('auth', auth);
 
 Alpine.start();
